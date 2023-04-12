@@ -42,7 +42,7 @@ const Home = () => {
         <MovieList title="Trending Now!!!" data={movies} />
         <MovieList title="My List" data={favorites} />
         <MovieList title="Upcoming" data={movies} />
-        <MovieList title="Top Rated" data={movies} />
+
       </div>
     </>
   )
