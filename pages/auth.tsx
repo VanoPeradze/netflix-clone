@@ -85,16 +85,16 @@ const Auth = () => {
     }
   }, [isLoading]);
 
-  
+
 
   return (
-    <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
+    <div className="relative h-full w-full bg-[url('/images/hero.gif')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="bg-black w-full h-full lg:bg-opacity-50">
         <nav className="px-12 py-5">
           <img src="/images/logo.png" className="h-12" alt="Logo" />
         </nav>
         <div className="flex justify-center">
-          <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
+          <div className="bg-white bg-opacity-20 backdrop-blur-lg px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full drop-shadow-lg">
             <h2 className="text-white text-4xl mb-8 font-semibold">
               {variant === 'login' ? 'Sign in' : 'Register'}
             </h2>
@@ -108,6 +108,7 @@ const Auth = () => {
                   onChange={(e: any) => setName(e.target.value)}
                 />
               )}
+
               <Input
                 id="email"
                 type="email"
@@ -115,6 +116,7 @@ const Auth = () => {
                 value={email}
                 onChange={(e: any) => setEmail(e.target.value)}
               />
+
               <Input
                 type="password"
                 id="password"
@@ -125,7 +127,7 @@ const Auth = () => {
             </div>
             <button
               onClick={variant === 'login' ? login : register}
-              className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-700 transition"
+              className="bg-blue-600 py-3 text-white rounded-md w-full mt-10 hover:bg-blue-400 transition"
               disabled={isLoading} // Disable button while loading
             >
               {isLoading ? 'Loading...' : variant === 'login' ? 'Login' : 'Sign up'}
@@ -144,9 +146,9 @@ const Auth = () => {
                 <FaGithub size={32} />
               </div>
             </div>
-            <p className="text-neutral-500 mt-12">
-              {variant === 'login' ? 'First time using Netflix?' : 'Already have an account?'}
-              <span onClick={toggleVariant} className="text-white ml-1 hover:underline cursor-pointer">
+            <p className="text-zinc-300 mt-12">
+              {variant === 'login' ? 'First time using Teraview?' : 'Already have an account?'}
+              <span onClick={toggleVariant} className="text-white ml-1 hover:underline hover:text-orange-300 cursor-pointer">
                 {variant === 'login' ? 'Create an account' : 'Login'}
               </span>
               .

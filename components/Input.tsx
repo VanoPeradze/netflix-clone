@@ -24,22 +24,23 @@ const Input: React.FC<InputProps> = ({ id, onChange, value, label, type }) => {
         pb-1
         w-full
         text-md
-      text-white
-      bg-neutral-700
+        text-zinc-700
+        bg-zinc-300
         appearance-none
         focus:outline-none
         focus:ring-0
         peer
         invalid:border-b-1
+        cursor-pointer
         "
-        placeholder=" " 
+        placeholder=" "
       />
-      <label 
-        htmlFor={id} 
+      <label
+        htmlFor={id}
         className="
         absolute 
         text-md
-      text-zinc-400
+       text-zinc-700
         duration-150 
         transform 
         -translate-y-3 
